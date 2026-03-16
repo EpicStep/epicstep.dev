@@ -21,10 +21,27 @@
   --color-primary-900: var(--color-blue-accent-900);
   --color-primary-950: var(--color-blue-accent-950);
   --color-primary-1000: var(--color-blue-accent-1000);
+
+  /* === LAYOUT === */
+  --max-width: 1200px;
+  --max-width-narrow: 800px;
+
+  /* === TRANSITIONS === */
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-reveal: 400ms;
+
+  /* === ACCENT (shared) === */
+  --color-accent: #2997ff;
+  --color-accent-hover: #0077ed;
+  --color-accent-glow: rgba(41, 151, 255, 0.15);
+  --color-accent-subtle: rgba(41, 151, 255, 0.08);
+  --gradient-metric: linear-gradient(135deg, #2997ff 0%, #30d158 100%);
 }
 
-.dark :root {
-  /* === VEGA-UI SECONDARY COLOR (Smoke for dark theme) === */
+/* ==================== DARK THEME ==================== */
+.dark {
   --color-secondary-0: var(--color-smoke-accent-0);
   --color-secondary-50: var(--color-smoke-accent-50);
   --color-secondary-100: var(--color-smoke-accent-100);
@@ -46,47 +63,115 @@
   --color-secondary-900: var(--color-smoke-accent-900);
   --color-secondary-950: var(--color-smoke-accent-950);
   --color-secondary-1000: var(--color-smoke-accent-1000);
-}
 
-:root {
-  /* === BACKGROUNDS === */
   --color-bg-primary: #000000;
   --color-bg-surface: #0a0a0a;
   --color-bg-surface-hover: #111111;
   --color-bg-elevated: #141414;
-  --color-bg-hero-gradient: linear-gradient(180deg, #000 0%, #060612 50%, #000 100%);
 
-  /* === TEXT === */
   --color-text-primary: #f5f5f7;
   --color-text-secondary: #86868b;
   --color-text-tertiary: #6e6e73;
-  --color-text-on-accent: #000000;
+  --color-text-on-accent: #ffffff;
 
-  /* === ACCENT === */
-  --color-accent: #2997ff;
-  --color-accent-hover: #0077ed;
-  --color-accent-glow: rgba(41, 151, 255, 0.15);
-  --color-accent-subtle: rgba(41, 151, 255, 0.08);
-
-  /* === BORDERS === */
   --color-border-subtle: rgba(255, 255, 255, 0.08);
   --color-border-hover: rgba(255, 255, 255, 0.15);
 
-  /* === GRADIENTS === */
-  --gradient-metric: linear-gradient(135deg, #2997ff 0%, #30d158 100%);
-
-  /* === SHADOWS === */
   --shadow-card: 0 0 0 1px var(--color-border-subtle), 0 4px 24px rgba(0, 0, 0, 0.4);
   --shadow-card-hover: 0 0 0 1px var(--color-border-hover), 0 8px 40px rgba(0, 0, 0, 0.6);
   --shadow-glow: 0 0 60px var(--color-accent-glow);
 
-  /* === LAYOUT === */
-  --max-width: 1200px;
-  --max-width-narrow: 800px;
+  /* Glass surfaces */
+  --color-glass-bg: rgba(255, 255, 255, 0.04);
+  --color-glass-bg-hover: rgba(255, 255, 255, 0.07);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-glass-border-hover: rgba(255, 255, 255, 0.18);
 
-  /* === TRANSITIONS === */
-  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --duration-fast: 150ms;
-  --duration-base: 300ms;
-  --duration-reveal: 800ms;
+  /* Navbar pill */
+  --color-pill-bg: rgba(255, 255, 255, 0.08);
+  --color-pill-border: rgba(255, 255, 255, 0.12);
+  --shadow-pill: 0 4px 32px rgba(0, 0, 0, 0.4),
+    0 0 0 0.5px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+
+  /* Mobile menu */
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-mobile-close-hover: rgba(255, 255, 255, 0.08);
+
+  /* Hero */
+  --color-hero-bg: #000000;
+  --hero-blob1: rgba(41, 151, 255, 0.4);
+  --hero-blob2: rgba(100, 60, 255, 0.35);
+  --hero-blob3: rgba(48, 209, 88, 0.25);
+  --hero-blob4: rgba(41, 151, 255, 0.2);
+  --hero-noise-opacity: 0.04;
+}
+
+/* ==================== LIGHT THEME ==================== */
+.light {
+  --color-secondary-0: var(--color-graphite-accent-0);
+  --color-secondary-50: var(--color-graphite-accent-50);
+  --color-secondary-100: var(--color-graphite-accent-100);
+  --color-secondary-150: var(--color-graphite-accent-150);
+  --color-secondary-200: var(--color-graphite-accent-200);
+  --color-secondary-250: var(--color-graphite-accent-250);
+  --color-secondary-300: var(--color-graphite-accent-300);
+  --color-secondary-350: var(--color-graphite-accent-350);
+  --color-secondary-400: var(--color-graphite-accent-400);
+  --color-secondary-450: var(--color-graphite-accent-450);
+  --color-secondary-500: var(--color-graphite-accent-500);
+  --color-secondary-550: var(--color-graphite-accent-550);
+  --color-secondary-600: var(--color-graphite-accent-600);
+  --color-secondary-650: var(--color-graphite-accent-650);
+  --color-secondary-700: var(--color-graphite-accent-700);
+  --color-secondary-750: var(--color-graphite-accent-750);
+  --color-secondary-800: var(--color-graphite-accent-800);
+  --color-secondary-850: var(--color-graphite-accent-850);
+  --color-secondary-900: var(--color-graphite-accent-900);
+  --color-secondary-950: var(--color-graphite-accent-950);
+  --color-secondary-1000: var(--color-graphite-accent-1000);
+
+  --color-bg-primary: #ffffff;
+  --color-bg-surface: #f5f5f7;
+  --color-bg-surface-hover: #ececee;
+  --color-bg-elevated: #e8e8ed;
+
+  --color-text-primary: #1d1d1f;
+  --color-text-secondary: #6e6e73;
+  --color-text-tertiary: #86868b;
+  --color-text-on-accent: #ffffff;
+
+  --color-border-subtle: rgba(0, 0, 0, 0.08);
+  --color-border-hover: rgba(0, 0, 0, 0.15);
+
+  --shadow-card: 0 0 0 1px var(--color-border-subtle), 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 0 0 1px var(--color-border-hover), 0 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 40px rgba(41, 151, 255, 0.1);
+
+  /* Glass surfaces */
+  --color-glass-bg: rgba(0, 0, 0, 0.03);
+  --color-glass-bg-hover: rgba(0, 0, 0, 0.06);
+  --color-glass-border: rgba(0, 0, 0, 0.08);
+  --color-glass-border-hover: rgba(0, 0, 0, 0.15);
+
+  /* Navbar pill */
+  --color-pill-bg: rgba(255, 255, 255, 0.72);
+  --color-pill-border: rgba(0, 0, 0, 0.08);
+  --shadow-pill: 0 4px 24px rgba(0, 0, 0, 0.08),
+    0 0 0 0.5px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+
+  /* Mobile menu */
+  --color-overlay: rgba(0, 0, 0, 0.3);
+  --color-mobile-close-hover: rgba(0, 0, 0, 0.06);
+
+  /* Hero */
+  --color-hero-bg: #f5f5f7;
+  --hero-blob1: rgba(41, 151, 255, 0.2);
+  --hero-blob2: rgba(100, 60, 255, 0.15);
+  --hero-blob3: rgba(48, 209, 88, 0.12);
+  --hero-blob4: rgba(41, 151, 255, 0.1);
+  --hero-noise-opacity: 0.02;
 }

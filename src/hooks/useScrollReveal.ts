@@ -25,8 +25,8 @@ export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(
         }
       },
       {
-        threshold: options?.threshold ?? 0.15,
-        rootMargin: options?.rootMargin ?? "0px 0px -60px 0px",
+        threshold: options?.threshold ?? 0.1,
+        rootMargin: options?.rootMargin ?? "0px 0px -20px 0px",
       }
     );
 

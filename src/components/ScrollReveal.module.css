@@ -1,6 +1,6 @@
 .root {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(16px);
   transition:
     opacity var(--duration-reveal) var(--ease-out),
     transform var(--duration-reveal) var(--ease-out);

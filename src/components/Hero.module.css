@@ -5,7 +5,7 @@
   justify-content: center;
   text-align: center;
   padding: var(--spacing-48) var(--spacing-12) var(--spacing-40);
-  background: #000;
+  background: var(--color-hero-bg);
   position: relative;
   overflow: hidden;
 }
@@ -25,7 +25,7 @@
   top: -10%;
   left: -5%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(41, 151, 255, 0.4) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--hero-blob1) 0%, transparent 70%);
   animation: drift1 20s ease-in-out infinite;
 }
 
@@ -36,7 +36,7 @@
   top: 10%;
   right: -10%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(100, 60, 255, 0.35) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--hero-blob2) 0%, transparent 70%);
   animation: drift2 25s ease-in-out infinite;
 }
 
@@ -47,7 +47,7 @@
   bottom: 5%;
   left: 20%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(48, 209, 88, 0.25) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--hero-blob3) 0%, transparent 70%);
   animation: drift3 22s ease-in-out infinite;
 }
 
@@ -58,7 +58,7 @@
   bottom: 20%;
   right: 15%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(41, 151, 255, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--hero-blob4) 0%, transparent 70%);
   animation: drift4 18s ease-in-out infinite;
 }
 
@@ -89,7 +89,7 @@
 .noise {
   position: absolute;
   inset: 0;
-  opacity: 0.04;
+  opacity: var(--hero-noise-opacity);
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 128px 128px;
   pointer-events: none;
@@ -146,8 +146,8 @@
 }
 
 .metricCard {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: var(--color-glass-bg);
+  border-color: var(--color-glass-border);
   border-radius: var(--radius-5);
   padding: var(--spacing-12) var(--spacing-14);
   align-items: flex-start;
@@ -163,8 +163,8 @@
 }
 
 .metricCard:hover {
-  border-color: rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--color-glass-border-hover);
+  background: var(--color-glass-bg-hover);
   box-shadow: var(--shadow-glow);
 }
 

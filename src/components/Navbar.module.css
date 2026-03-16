@@ -37,15 +37,11 @@
   max-width: 680px;
   padding: 0 var(--spacing-10);
   border-radius: 999px;
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.12);
+  background-color: var(--color-pill-bg);
+  border-color: var(--color-pill-border);
   -webkit-backdrop-filter: blur(64px) saturate(200%);
   backdrop-filter: blur(64px) saturate(200%);
-  box-shadow:
-    0 4px 32px rgba(0, 0, 0, 0.4),
-    0 0 0 0.5px rgba(255, 255, 255, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+  box-shadow: var(--shadow-pill);
 }
 
 .logo {
@@ -64,6 +60,7 @@
 /* Desktop links */
 .desktopLinks {
   display: flex;
+  align-items: center;
   gap: var(--spacing-12);
   transition: gap var(--transition-state-delay) var(--ease-out);
 }
@@ -84,6 +81,36 @@
 
 .link:hover {
   color: var(--color-text-primary);
+}
+
+/* Theme toggle */
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  border-radius: var(--radius-2);
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast-state-delay), background var(--transition-fast-state-delay);
+}
+
+.themeToggle:hover {
+  color: var(--color-text-primary);
+  background: var(--color-glass-bg-hover);
+}
+
+.themeToggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.pillScrolled .themeToggle svg {
+  width: 16px;
+  height: 16px;
 }
 
 /* Hamburger */
@@ -154,6 +181,34 @@
   color: var(--color-text-primary);
 }
 
+/* Mobile theme toggle in menu */
+.mobileThemeToggle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  margin-top: auto;
+  padding-top: var(--spacing-8);
+  border-top: 1px solid var(--color-border-subtle);
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-2);
+  font-weight: 500;
+  transition: color var(--transition-fast-state-delay);
+}
+
+.mobileThemeToggle:hover {
+  color: var(--color-text-primary);
+}
+
+.mobileThemeToggle svg {
+  width: 18px;
+  height: 18px;
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -173,7 +228,7 @@
     position: fixed;
     inset: 0;
     z-index: 99;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--color-overlay);
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--transition-state-delay) var(--ease-out);
@@ -204,7 +259,7 @@
 
   .mobileClose:hover {
     color: var(--color-text-primary);
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--color-mobile-close-hover);
   }
 
   .mobileMenu {
