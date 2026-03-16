@@ -1,0 +1,15 @@
+.root {
+  padding: 0 var(--spacing-12) var(--spacing-20);
+  text-align: center;
+}
+
+.separator {
+  background: var(--color-border-subtle) !important;
+  margin-bottom: var(--spacing-20);
+}
+
+.text {
+  font-size: var(--font-size-1);
+  color: var(--color-text-tertiary);
+  line-height: var(--line-height-1);
+}

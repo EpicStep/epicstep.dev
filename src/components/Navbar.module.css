@@ -1,0 +1,230 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-8) var(--spacing-12);
+  pointer-events: none;
+  transition: padding var(--transition-state-delay) var(--ease-out);
+}
+
+.headerScrolled {
+  padding: var(--spacing-4) var(--spacing-12);
+}
+
+/* The pill — direct element that gets backdrop-filter */
+.pill {
+  pointer-events: auto;
+  max-width: var(--max-width);
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-12);
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition:
+    all var(--transition-state-delay) var(--ease-out);
+}
+
+.pillScrolled {
+  height: 44px;
+  max-width: 680px;
+  padding: 0 var(--spacing-10);
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(64px) saturate(200%);
+  backdrop-filter: blur(64px) saturate(200%);
+  box-shadow:
+    0 4px 32px rgba(0, 0, 0, 0.4),
+    0 0 0 0.5px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.logo {
+  font-family: var(--font-mono), monospace;
+  font-weight: 700;
+  font-size: var(--font-size-4);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: font-size var(--transition-state-delay) var(--ease-out);
+}
+
+.pillScrolled .logo {
+  font-size: var(--font-size-2);
+}
+
+/* Desktop links */
+.desktopLinks {
+  display: flex;
+  gap: var(--spacing-12);
+  transition: gap var(--transition-state-delay) var(--ease-out);
+}
+
+.pillScrolled .desktopLinks {
+  gap: var(--spacing-8);
+}
+
+.link {
+  font-size: var(--font-size-1);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast-state-delay);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.link:hover {
+  color: var(--color-text-primary);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  z-index: 101;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  height: 2px;
+  background: var(--color-text-primary);
+  border-radius: 2px;
+  transition:
+    transform var(--transition-state-delay) var(--ease-out),
+    opacity var(--transition-fast-state-delay);
+}
+
+.hamburger::before {
+  top: 10px;
+}
+
+.hamburger::after {
+  bottom: 10px;
+}
+
+.hamburgerOpen::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburgerOpen::after {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+/* Mobile overlay */
+.mobileOverlay {
+  display: none;
+}
+
+/* Mobile slide-out menu — lives OUTSIDE header to avoid stacking context issues */
+.mobileMenu {
+  display: none;
+}
+
+.mobileLink {
+  font-size: var(--font-size-3);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast-state-delay);
+}
+
+.mobileLink:hover {
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .desktopLinks {
+    display: none;
+  }
+
+  .pillScrolled {
+    max-width: 100%;
+    border-radius: var(--radius-4);
+  }
+
+  .mobileOverlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-state-delay) var(--ease-out);
+  }
+
+  .mobileOverlayOpen {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobileClose {
+    position: absolute;
+    top: var(--spacing-8);
+    right: var(--spacing-8);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-4);
+    border-radius: var(--radius-2);
+    transition: color var(--transition-fast-state-delay), background var(--transition-fast-state-delay);
+  }
+
+  .mobileClose:hover {
+    color: var(--color-text-primary);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 260px;
+    z-index: 101;
+    background-color: var(--color-bg-surface);
+    padding: var(--spacing-40) var(--spacing-16) var(--spacing-16);
+    gap: var(--spacing-12);
+    transform: translateX(100%);
+    transition: transform var(--transition-state-delay) var(--ease-out);
+    border-left: 1px solid var(--color-border-subtle);
+  }
+
+  .mobileMenuOpen {
+    transform: translateX(0);
+  }
+}

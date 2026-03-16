@@ -1,0 +1,92 @@
+:root {
+  /* === VEGA-UI PRIMARY COLOR (Blue) === */
+  --color-primary-0: var(--color-blue-accent-0);
+  --color-primary-50: var(--color-blue-accent-50);
+  --color-primary-100: var(--color-blue-accent-100);
+  --color-primary-150: var(--color-blue-accent-150);
+  --color-primary-200: var(--color-blue-accent-200);
+  --color-primary-250: var(--color-blue-accent-250);
+  --color-primary-300: var(--color-blue-accent-300);
+  --color-primary-350: var(--color-blue-accent-350);
+  --color-primary-400: var(--color-blue-accent-400);
+  --color-primary-450: var(--color-blue-accent-450);
+  --color-primary-500: var(--color-blue-accent-500);
+  --color-primary-550: var(--color-blue-accent-550);
+  --color-primary-600: var(--color-blue-accent-600);
+  --color-primary-650: var(--color-blue-accent-650);
+  --color-primary-700: var(--color-blue-accent-700);
+  --color-primary-750: var(--color-blue-accent-750);
+  --color-primary-800: var(--color-blue-accent-800);
+  --color-primary-850: var(--color-blue-accent-850);
+  --color-primary-900: var(--color-blue-accent-900);
+  --color-primary-950: var(--color-blue-accent-950);
+  --color-primary-1000: var(--color-blue-accent-1000);
+}
+
+.dark :root {
+  /* === VEGA-UI SECONDARY COLOR (Smoke for dark theme) === */
+  --color-secondary-0: var(--color-smoke-accent-0);
+  --color-secondary-50: var(--color-smoke-accent-50);
+  --color-secondary-100: var(--color-smoke-accent-100);
+  --color-secondary-150: var(--color-smoke-accent-150);
+  --color-secondary-200: var(--color-smoke-accent-200);
+  --color-secondary-250: var(--color-smoke-accent-250);
+  --color-secondary-300: var(--color-smoke-accent-300);
+  --color-secondary-350: var(--color-smoke-accent-350);
+  --color-secondary-400: var(--color-smoke-accent-400);
+  --color-secondary-450: var(--color-smoke-accent-450);
+  --color-secondary-500: var(--color-smoke-accent-500);
+  --color-secondary-550: var(--color-smoke-accent-550);
+  --color-secondary-600: var(--color-smoke-accent-600);
+  --color-secondary-650: var(--color-smoke-accent-650);
+  --color-secondary-700: var(--color-smoke-accent-700);
+  --color-secondary-750: var(--color-smoke-accent-750);
+  --color-secondary-800: var(--color-smoke-accent-800);
+  --color-secondary-850: var(--color-smoke-accent-850);
+  --color-secondary-900: var(--color-smoke-accent-900);
+  --color-secondary-950: var(--color-smoke-accent-950);
+  --color-secondary-1000: var(--color-smoke-accent-1000);
+}
+
+:root {
+  /* === BACKGROUNDS === */
+  --color-bg-primary: #000000;
+  --color-bg-surface: #0a0a0a;
+  --color-bg-surface-hover: #111111;
+  --color-bg-elevated: #141414;
+  --color-bg-hero-gradient: linear-gradient(180deg, #000 0%, #060612 50%, #000 100%);
+
+  /* === TEXT === */
+  --color-text-primary: #f5f5f7;
+  --color-text-secondary: #86868b;
+  --color-text-tertiary: #6e6e73;
+  --color-text-on-accent: #000000;
+
+  /* === ACCENT === */
+  --color-accent: #2997ff;
+  --color-accent-hover: #0077ed;
+  --color-accent-glow: rgba(41, 151, 255, 0.15);
+  --color-accent-subtle: rgba(41, 151, 255, 0.08);
+
+  /* === BORDERS === */
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.15);
+
+  /* === GRADIENTS === */
+  --gradient-metric: linear-gradient(135deg, #2997ff 0%, #30d158 100%);
+
+  /* === SHADOWS === */
+  --shadow-card: 0 0 0 1px var(--color-border-subtle), 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 0 0 1px var(--color-border-hover), 0 8px 40px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 60px var(--color-accent-glow);
+
+  /* === LAYOUT === */
+  --max-width: 1200px;
+  --max-width-narrow: 800px;
+
+  /* === TRANSITIONS === */
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-reveal: 800ms;
+}

@@ -1,0 +1,41 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding-bottom: var(--spacing-28);
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+}
+
+.label {
+  display: inline-block;
+  font-size: var(--font-size-1);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  padding-bottom: var(--spacing-2);
+}
+
+.title {
+  font-size: var(--text-font-size-10);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: var(--heading-line-height-10);
+  letter-spacing: -0.025em;
+  padding-bottom: var(--spacing-4);
+}
+
+.center .title {
+  max-width: 700px;
+}
+
+.description {
+  font-size: var(--text-font-size-4);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-4);
+  max-width: 640px;
+}
